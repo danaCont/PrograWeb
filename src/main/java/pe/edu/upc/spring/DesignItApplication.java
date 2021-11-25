@@ -43,5 +43,5 @@ public class DesignItApplication implements CommandLineRunner {
 			String bcryptPassword = passwordEncoder.encode(contrasena);
 			System.out.println(bcryptPassword);
 		}
-	}
+	}//prueba
 }
