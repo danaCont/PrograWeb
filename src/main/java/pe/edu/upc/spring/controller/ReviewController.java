@@ -60,7 +60,7 @@ public class ReviewController {
 			if (flag)
 				return "redirect:/review/listar";
 			else {
-				model.addAttribute("mensaje", "Ocurrió un error");
+				model.addAttribute("mensaje", "Ocurrio un error");
 				return "redirect:/review/irRegistrar";
 			}
 		}
@@ -70,7 +70,7 @@ public class ReviewController {
 	public String modificar(@PathVariable int id, Model model, RedirectAttributes objRedir) throws ParseException {
 		Review objResena = rService.listarId(id).get();
 		if (objResena == null) {
-			objRedir.addFlashAttribute("mensaje", "Ocurrió un error");
+			objRedir.addFlashAttribute("mensaje", "Ocurrio un error");
 			return "redirect:/review/listar";
 		} else {
 			model.addAttribute("listaCustomers", cService.listar());
